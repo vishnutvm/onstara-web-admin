@@ -1,9 +1,16 @@
+import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import './index.css';
+import { HomePage } from './pages/usersPages/HomePage';
+
 function App() {
   return (
-    <div className="app">
-      <h1 className="text-red-500">Onstara</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
