@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Build output
+dist/
+build/
+
+# Server-side dependencies
+server/node_modules
+
+# IDE files
+.vscode/
+
+# Database files
+*.sqlite
+
+# Compiled files
+*.js
+*.map
