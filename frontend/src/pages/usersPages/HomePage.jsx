@@ -7,7 +7,7 @@ import Category from '../../components/ Category';
 export const HomePage = () => {
   return (
     <>
-      <Navbar />
+   
       <Banner />
       <Features />
       <Category />

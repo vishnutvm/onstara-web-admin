@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Category = () => {
+  const navigate = useNavigate();
   // category from api pass to state
   const [category, setCategory] = useState([]);
 
@@ -11,7 +13,10 @@ const Category = () => {
       </h2>
       <div className="  flex flex-wrap md:grid grid-cols-3 gap-3  justify-center ">
         {/* loop through each category from state !bubble check img location */}
-        <div className="relative rounded-sm overflow-hidden group max-h-[30vh] ">
+        <div
+          onClick={() => navigate('/products')}
+          className="relative rounded-sm overflow-hidden group max-h-[30vh] "
+        >
           <img
             src="https://images.pexels.com/photos/8531230/pexels-photo-8531230.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="category 1"

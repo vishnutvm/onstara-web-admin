@@ -5,13 +5,13 @@ const Navbar = () => {
   return (
     <>
       {/* component */}
-      <nav className="bg-white shadow">
+      <nav className="bg-white shadow ">
         <div className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
           <div className="flex justify-between items-center">
             <div>
               <a
                 className=" text-xl font-bold md:text-2xl text-rose-600"
-                href="#"
+                href="/"
               >
                 Onstara
               </a>
