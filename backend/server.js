@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
 import mongoDB from './config/db.js';
+import categoriesRouter from './routes/categoriesRouter.js';
 const app = express();
 dotenv.config();
 
@@ -17,7 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 // Use the routes defined in routes/index.js
-// app.use('/', routes);
+
+app.use('/api/categories', categoriesRouter);
 
 const PORT = process.env.PORT || 5000;
 
