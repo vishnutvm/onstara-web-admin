@@ -30,7 +30,7 @@ export const addProduct = async (req, res) => {
 };
 
 // get product
-export const getProducts = async (req, res) => {
+export const getAllProducts = async (req, res) => {
   try {
     const products = await Product.find().populate('category');
     return res.status(200).json({ products });
