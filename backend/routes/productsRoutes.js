@@ -3,6 +3,7 @@ import {
   addProduct,
   getAllProducts,
   getProducts,
+  getCategoryProducts,
 } from '../controllers/productsController.js';
 import { upload } from '../middlewares/fileUpload.js';
 
@@ -12,5 +13,6 @@ const router = Router();
 router.post('/addproduct', upload.single('picture'), addProduct);
 router.get('/', getAllProducts);
 router.get('/:id', getProducts);
+router.get('/getcategoryproducts/:categoryId', getCategoryProducts);
 
 export default router;
