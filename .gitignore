@@ -22,5 +22,5 @@ server/node_modules
 *.sqlite
 
 # Compiled files
-*.js
-*.map
+frontend/*.js
+frontend/*.map
