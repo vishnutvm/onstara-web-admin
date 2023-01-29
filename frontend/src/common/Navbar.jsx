@@ -38,36 +38,43 @@ const Navbar = () => {
           >
             <div className="flex flex-col md:flex-row md:mx-6  items-center gap-3 ">
               <a
-                className="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-sm text-rose-600 font-medium hover:text-rose-600 md:mx-4 md:my-0"
                 href="#"
               >
                 Home
               </a>
               <a
-                className="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-sm text-gray-700 font-medium hover:text-rose-600 md:mx-4 md:my-0"
                 href="#"
               >
                 Shop
               </a>
               <a
-                className="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-sm text-gray-700 font-medium hover:text-rose-600 md:mx-4 md:my-0"
                 href="#"
               >
                 Contact
               </a>
               <a
-                className="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-sm text-gray-700 font-medium hover:text-rose-600 md:mx-4 md:my-0"
                 href="#"
               >
                 About
               </a>
             </div>
-            <div className="flex justify-center md:block">
+            <div className="flex justify-center md:block gap-1">
               <a
-                className="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-sm text-gray-700 font-medium hover:text-rose-600 vmd:mx-4 md:my-0"
                 href="#"
               >
-                Login / Register
+                Login
+              </a>
+              <span className="px-1">/</span>
+              <a
+                className="my-1 text-sm text-gray-700 font-medium hover:text-rose-600 vmd:mx-4 md:my-0"
+                href="#"
+              >
+                Register
               </a>
             </div>
           </div>
