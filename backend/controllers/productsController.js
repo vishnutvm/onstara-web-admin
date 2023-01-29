@@ -28,3 +28,13 @@ export const addProduct = async (req, res) => {
     return res.status(500).json({ error });
   }
 };
+
+// get product
+export const getProducts = async (req, res) => {
+  try {
+    const products = await Product.find().populate('category');
+    return res.status(200).json({ products });
+  } catch (error) {
+    return res.status(500).json({ error });
+  }
+};
