@@ -18,7 +18,5 @@ server/node_modules
 # IDE files
 .vscode/
 
-# Database files
-*.sqlite
 
 
