@@ -2,6 +2,13 @@ import Category from '../models/Category.js';
 import Product from '../models/Product.js';
 import uploadS3 from '../utils/s3.js';
 
+// add product
+// {
+//   name:test,
+//   price:20,
+//   category:women,
+//   picture:file
+// }
 export const addProduct = async (req, res) => {
   console.log(req.body);
   console.log('tes1');
