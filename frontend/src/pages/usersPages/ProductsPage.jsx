@@ -15,10 +15,12 @@ const ProductsPage = () => {
       .then((data) => {
         console.log(data);
         setProductList(data.products);
+        if (data.products.length === 0) {
+          navigate('/');
+        }
         setTimeout(() => {
           setLoading(false);
         }, 300);
-        
       })
       .catch((error) => {
         console.log(error);
