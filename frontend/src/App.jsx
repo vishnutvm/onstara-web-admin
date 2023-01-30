@@ -12,7 +12,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/products" element={<ProductsPage />} />
+
+          <Route
+            exact
+            path="/products/:categoryId"
+            element={<ProductsPage />}
+          />
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -28,7 +28,8 @@ const Category = () => {
           categoriesList.categories.map((category, i) => (
             <div
               key={category._id}
-              onClick={() => navigate('/products')}
+              onClick={() => navigate(`/products/${category._id}`)}
+              // onClick={() => navigate('/products')}
               className="relative rounded-sm overflow-hidden group max-h-[30vh] "
             >
               <img
@@ -36,10 +37,7 @@ const Category = () => {
                 alt="category 1"
                 className="w-[100%] h-[100%] object-cover object-center "
               />
-              <a
-                href="#"
-                className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition"
-              >
+              <a className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
                 {category.name}
               </a>
             </div>
