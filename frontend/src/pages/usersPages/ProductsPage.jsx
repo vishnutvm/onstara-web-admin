@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { getCategoryProducts } from '../../services/productServices';
 
 const ProductsPage = () => {
   const [productList, setProductList] = useState([]);
+  const navigate = useNavigate();
   const { categoryId } = useParams();
   const response = useParams();
   console.log(response);
   useEffect(() => {
-    getCategoryProducts(categoryId).then((data) => {
-      console.log(data);
-      setProductList(data.products);
-    });
+    getCategoryProducts(categoryId)
+      .then((data) => {
+        console.log(data);
+        setProductList(data.products);
+      })
+      .catch((error) => {
+        console.log(error);
+        navigate('/');
+      });
   }, []);
 
   return (
@@ -26,7 +32,7 @@ const ProductsPage = () => {
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {productList &&
             productList.map((product) => (
-              <div key={product.id} className="group relative">
+              <div key={product._id} className="group relative">
                 <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
                   <img
                     src={product.image}

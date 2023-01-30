@@ -4,6 +4,7 @@ import { HomePage } from './pages/usersPages/HomePage';
 import Navbar from './common/Navbar';
 import Footer from './common/Footer';
 import ProductsPage from './pages/usersPages/ProductsPage';
+import { ErrorPage } from './pages/ErrorPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             path="/products/:categoryId"
             element={<ProductsPage />}
           />
+          <Route exact path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />
