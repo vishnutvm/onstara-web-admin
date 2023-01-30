@@ -137,9 +137,9 @@ const Footer = () => {
         className="text-center p-4"
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
       >
-        © 2021 Copyright:
+        © 2021 Copyright : 
         <a className="text-whitehite" href="https://tailwind-elements.com/">
-          Tailwind Elements
+          Onstara
         </a>
       </div>
     </footer>

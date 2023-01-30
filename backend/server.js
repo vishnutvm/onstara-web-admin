@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
 import mongoDB from './config/db.js';
-import categoriesRouter from './routes/categoriesRouter.js';
+import categoriesRoutes from './routes/categoriesRoutes.js';
 import productsRoutes from './routes/productsRoutes.js';
 const app = express();
 dotenv.config();
@@ -20,7 +20,7 @@ app.use(morgan('dev'));
 
 // Use the routes defined in routes/index.js
 
-app.use('/api/categories', categoriesRouter);
+app.use('/api/categories', categoriesRoutes);
 app.use('/api/products', productsRoutes);
 
 const PORT = process.env.PORT || 5000;
